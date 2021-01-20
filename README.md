@@ -1,14 +1,13 @@
-# Welcome to Blog Website
+## Welcome to Blog Website
+
 [![](https://img.shields.io/pypi/pyversions/Django.svg)](https://python.org/downloads/)
 [![](https://img.shields.io/badge/django-2.0%20%7C%202.1%20%7C%202.2-success.svg)](https://djangoproject.com/)
-[![](https://img.shields.io/apm/l/vim-mode.svg)](https://choosealicense.com/licenses/mit/)
 
 Blog with Django web framework. 
 
-
 Django packages provides a set of module  for user Registration Authentication and Authorization 
 
-# Documentation
+## Documentation
   -------------
   http://django-rest-auth.readthedocs.org/en/latest/
   
@@ -16,7 +15,7 @@ Django packages provides a set of module  for user Registration Authentication a
   https://docs.djangoproject.com/en/3.1/
 
 
-# Technology Stack We have used
+## Technology Stack We have used
 
 1. Python 3.6
 2. Django 3.1.2
@@ -29,7 +28,7 @@ Django packages provides a set of module  for user Registration Authentication a
 9. Bootstrap
 
 
-# Project Structure:
+## Project Structure:
 
     .
     ├── blog
@@ -88,7 +87,7 @@ Django packages provides a set of module  for user Registration Authentication a
         └── sidebar.html
         
 
-# Features:
+## Features:
   ---------
   * User registration
 
@@ -111,7 +110,7 @@ Django packages provides a set of module  for user Registration Authentication a
 
    See documentation [here.](./API.md)
   
-  
+    
 ## Run the project Locally ##
 
 i. Clone the repository.
@@ -119,6 +118,23 @@ i. Clone the repository.
 ii. Go to directory of manage.py and install the requirements.
 
 	pip install -r requirements.txt
+	
+	
+## Migrate & Collect Static
+```
+$ cd src && python manage.py migrate
+$ python manage.py collectstatic
+```
+## Create Admin User
+```
+$ python manage.py createsuperuser
+```
+## Run Server
+```
+$ python manage.py runserver
+```
+> Enter your browser http://localhost:8000/. You can login via admin in http://localhost:8000/admin/.
+
 	
 **Note:**
 You may configure the virtual environment if required.
