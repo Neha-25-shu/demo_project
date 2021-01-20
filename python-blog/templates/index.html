@@ -2,9 +2,187 @@
 {% load static %}
 
 {% block content %}
+<style>
+  body {
+    margin: 0px;
+  }
+
+  .menu-item {
+    font-weight: 600;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    color: black;
+    margin-right: 24px;
+    cursor: pointer;
+  }
+
+  .primary-button {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background-color: rgb(170, 210, 54);
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 9px 34px;
+    font-weight: 600;
+
+  }
+
+  #nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: calc(100% - 56px);
+    height: 77px;
+    justify-content: space-between;
+    padding: 0px 28px;
+    background-color: #ffffff;
+    position: fixed;
+  }
+
+  .logo {
+    width: 120px;
+    height: 60px
+  }
+
+  #bi {
+    background-color: transparent;
+    background-image: url("https://st2.depositphotos.com/1420973/6409/i/950/depositphotos_64095317-stock-photo-blog-concept-cloud-chart-print.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100vh;
+
+  }
+
+  #landing-section {
+    height: calc(100vh - 77px);
+    width: 100%;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .land {
+    max-width: 1100px;
+  }
+
+  .land h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    margin: 0px;
+  }
+
+  .pera {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+    color: #8b8b99;
+    text-align: center;
+    padding: 16px;
+    margin: 14px 0px;
+  }
+
+  #cards {
+    display: flex;
+    align-items: stretch;
+    height: calc(100vh - 77px);
+
+  }
+
+  #card {
+    display: flex;
+    flex-direction: column;
+    padding: 112px 48px;
+    text-align: center;
+    width: 25%;
+    box-sizing: border-box;
+
+  }
+
+  .card1 {
+    background-color: #5acda6;
+  }
+
+  .card2 {
+    background-color: #91ac41;
+  }
+
+  .card3 {
+    background-color: #e4b476;
+  }
+
+  .card4 {
+    background-color: #f69dad;
+  }
+
+  #card h2 {
+    font-size: 24px;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    align-items: center;
+    margin: 24px 0px;
+  }
+
+  #card p {
+    font-size: 14px;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+    align-items: center;
+    margin: 0px 0px 14px;
+
+  }
+
+  .icon {
+    color: #ffffff;
+    font-size: 96px;
+    transition: transform 0.3s;
+    line-height: 1;
+    text-align: center;
+  }
+
+  #card:hover .icon {
+    transform: scale(1.1);
+  }
+
+  .cardp3 {
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: calc(25% - 51px);
+    padding: 24px;
+    margin: 0px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .cardp3:hover .icon-wrapper {
+    transform: scale(1.1);
+  }
+
+
+  #card4 {
+    display: flex;
+    direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+  }
+
+</style>
+
 
 <!-- Hero Section-->
-<section style="background:url('static/img/book.gif'); background-size:cover; background-position:center" class="section hero">
+<section style="background:url('static/img/book.gif'); background-size:cover; background-position:center"
+  class="section hero">
   <div class="container">
     <div class="row">
       <div class="col-lg-7">
@@ -19,8 +197,18 @@
     <div class="row">
       <div class="col-lg-8">
         <h2 class="h3">The Introduction</h2><small>
-        <p>A blog can be private, as in most cases, or it can be for business or not-for-profit organization or government purposes. Blogs used internally, and only available to employees via an Intranet are called corporate blogs. Companies use internal corporate blogs enhance the communication, culture and employee engagement in a corporation. Internal corporate blogs can be used to communicate news about company policies or procedures, build employee esprit de corps and improve morale. Companies and other organizations also use external, publicly accessible blogs for marketing, branding, or public relations purposes. Some organizations have a blog authored by their executive; in practice, many of these executive blog posts are penned by a ghostwriter, who makes posts in the style of the credited author. Similar blogs for clubs and societies are called club blogs, group blogs, or by similar names; typical use is to inform members and other interested parties of club and member activities.</p>
-      </small></div>
+          <p>A blog can be private, as in most cases, or it can be for business or not-for-profit organization or
+            government purposes. Blogs used internally, and only available to employees via an Intranet are called
+            corporate blogs. Companies use internal corporate blogs enhance the communication, culture and employee
+            engagement in a corporation. Internal corporate blogs can be used to communicate news about company policies
+            or procedures, build employee esprit de corps and improve morale. Companies and other organizations also use
+            external, publicly accessible blogs for marketing, branding, or public relations purposes. Some
+            organizations have a blog authored by their executive; in practice, many of these executive blog posts are
+            penned by a ghostwriter, who makes posts in the style of the credited author. Similar blogs for clubs and
+            societies are called club blogs, group blogs, or by similar names; typical use is to inform members and
+            other interested parties of club and member activities.</p>
+        </small>
+      </div>
     </div>
   </div>
 </section>
@@ -72,12 +260,14 @@
     <div class="row">
       <div class="col-md-7">
         <h2>“The Best Way To Get Started Is To Quit Talking And Begin Doing.” – Walt Disney<br></br>
-          “The Pessimist Sees Difficulty In Every Opportunity. The Optimist Sees Opportunity In Every Difficulty.” – Winston Churchill
+          “The Pessimist Sees Difficulty In Every Opportunity. The Optimist Sees Opportunity In Every Difficulty.” –
+          Winston Churchill
         </h2>
       </div>
     </div>
   </div>
 </section>
+
 <!-- Latest Posts -->
 <section class="latest-posts">
   <div class="container">
@@ -108,6 +298,40 @@
     </div>
   </div>
 </section>
+
+<div id="bi">
+  <div id="cards">
+    <div id="card" class="card1">
+      <i class="fas fa-cut icon"></i>
+      <h2>Technical</h2>
+      <p>Post your blog relating to a particular subject, art, or craft, or its techniques involving or
+        concerned with applied and industrial sciences. it may refer to Technical vehicles ,analysis
+        drawing,support and Technical education</p>
+    </div>
+    <div id="card" class="card2">
+      <i class="fa fa-paint-brush icon"></i>
+      <h2>Political</h2>
+      <p>Post your blog relating to the government or public affairs of a country.In modern nation states,
+        people often form political parties to represent their ideas. Members of a party often agree to take
+        the same position on many issues </p>
+    </div>
+    <div id="card" class="card3">
+      <i class="fa fa-shopping-bag icon"></i>
+      <h2>Educational</h2>
+      <p>Post your blogs relating the education. Education is the process of facilitating learning, or the
+        acquisition of knowledge, skills, values, beliefs, and habits. Educational methods include teaching,
+        discussion and directed research.</p>
+    </div>
+    <div id="card" class="card4">
+      <i class="fa fa-smile-o icon"></i>
+      <h2>Health</h2>
+      <p>Post your blog relating to your Health. The state of being free from illness or injury. A person's
+        mental or physical condition used to express friendly feelings towards one's companions before
+        drinking.</p>
+    </div>
+  </div>  
+</div>
+
 <!-- Newsletter Section
 <section class="newsletter no-padding-top">
   <div class="container">

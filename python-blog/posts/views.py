@@ -62,7 +62,8 @@ class IndexView(View):
     def get(self, request, *args, **kwargs):
         featured = Post.objects.filter(featured=True)
         latest = Post.objects.order_by("-timestamp")[0:3]
-        context = {"object_list": featured, "latest": latest, "form": self.form}
+        context = {"object_list": featured,
+                   "latest": latest, "form": self.form}
         return render(request, "index.html", context)
 
     def post(self, request, *args, **kwargs):
