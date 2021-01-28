@@ -106,10 +106,14 @@ Django packages provides a set of module  for user Registration Authentication a
   
   
 
-## APIs Details
+## API's Details
 
    See documentation [here.](./API.md)
-  
+   
+   
+## The project Deployment Link
+
+   Click Me - http://shuklaneha.pythonanywhere.com/
     
 ## Run the project Locally ##
 
@@ -153,11 +157,6 @@ iii. Run migrations
 iv. Ready to run the server.
 
 	  python manage.py runserver
-
-
-# Linting:
-
-	make lint
 
 
 # Testing:
